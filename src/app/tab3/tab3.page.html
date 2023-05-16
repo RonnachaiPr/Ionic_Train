@@ -1,0 +1,92 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 3
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 3</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div style="text-align: center;">
+    <ion-toolbar>
+      <ion-title>Introduce Yourself</ion-title>
+    </ion-toolbar>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-input label="Name: " [(ngModel)]="Name!" [clearInput]="true" 
+          aria-placeholder="Enter name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Age: " [(ngModel)]="Age!" type="number" [clearInput]="true"
+          aria-placeholder="Enter age (years)"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-radio-group [(ngModel)]="Gender">
+          <ion-item>
+            <ion-label>Gender</ion-label>
+            <ion-col>
+              Male<ion-radio value="Male"></ion-radio>
+            </ion-col>
+            <ion-col>
+              Femal<ion-radio value="Femal"></ion-radio>
+            </ion-col>
+            <ion-col>
+              Unknow<ion-radio value="Unknow"></ion-radio>
+            </ion-col>
+          </ion-item>
+        </ion-radio-group>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-input label="What is your favorite color?: " [(ngModel)]="Color!" [clearInput]="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="What is your favorite food?: " [(ngModel)]="Food!" [clearInput]="true"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Line:</ion-label>
+          <ion-checkbox [(ngModel)]="isInputEnabled1" name="'isInputEnabled1"></ion-checkbox>
+          <ion-input [(ngModel)]="Line!" type="text" [disabled]="!isInputEnabled1"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label>Facebook:</ion-label>
+          <ion-checkbox [(ngModel)]="isInputEnabled2" name="'isInputEnabled2"></ion-checkbox>
+          <ion-input [(ngModel)]="Facebook!" type="text" [disabled]="!isInputEnabled2"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label>Instagram:</ion-label>
+          <ion-checkbox [(ngModel)]="isInputEnabled3" name="'isInputEnabled3"></ion-checkbox>
+          <ion-input [(ngModel)]="Instagram!" type="text" [disabled]="!isInputEnabled3"></ion-input>
+          
+        </ion-item>        
+      </ion-col>
+    </ion-row>
+    <ion-button (click)="onSave()">Save</ion-button>
+    <ion-button name="person-add-outline"  [routerLink]="'/tabs/tab1'">BMI</ion-button>
+  </ion-grid>
+
+ 
+  
+
+  <app-explore-container name="Tab 3 page"></app-explore-container>
+</ion-content>
